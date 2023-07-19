@@ -79,7 +79,7 @@ function reducer(state: State, action: Action) {
   if (type === "SET_TYPE_TRADUCTION") {
     return {
       ...state,
-      formal: !state.traductionFormal,
+      traductionFormal: !state.traductionFormal,
     };
   }
 
