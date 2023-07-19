@@ -13,6 +13,7 @@ import LargeTextInput from "../components/largetextinput";
 import ToggleButton from "@/components/togglebutton";
 import { useEffect } from "react";
 import { useDebounce } from "../customHooks/useDebounce";
+import { classNames } from "../lib/className";
 
 function App() {
   const {
@@ -68,7 +69,10 @@ function App() {
           {SUPPORTED_LANGUAGES[languageFrom as Languages] || AUTO_LANGUAGE}
         </span>
         <button
-          className="border rounded-md p-3"
+          className={classNames(
+            languageFrom === AUTO_LANGUAGE ? "bg-slate-400" : "",
+            "border rounded-md p-3"
+          )}
           onClick={switchLanguage}
           disabled={languageFrom === AUTO_LANGUAGE}
         >
