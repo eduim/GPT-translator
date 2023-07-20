@@ -23,6 +23,18 @@ function reducer(state: State, action: Action) {
 
     const loading = state.textFrom !== "";
 
+    if (state.result !== "") {
+      console.log("here", state.result);
+      return {
+        ...state,
+        loading,
+        result: "",
+        textFrom: state.result,
+        languageFrom: state.languageTo,
+        languageTo: state.languageFrom,
+      };
+    }
+    console.log("here2");
     return {
       ...state,
       loading,
