@@ -70,7 +70,7 @@ function App() {
         </span>
         <button
           className={classNames(
-            languageFrom === AUTO_LANGUAGE ? "bg-slate-400" : "",
+            languageFrom === AUTO_LANGUAGE ? "bg-gray-400" : "",
             "border rounded-md p-3"
           )}
           onClick={switchLanguage}
